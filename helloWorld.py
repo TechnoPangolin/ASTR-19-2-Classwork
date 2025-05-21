@@ -5,9 +5,14 @@ Date: 2025-04-29
 Assignment: 
 Task: 
 '''
+import matplotlib.pyplot as plt
+import numpy as np
 
-def main():
-    
+theta = np.linspace(0,2*np.pi,100)
+x = np.cos(theta)
+y = np.sin(theta)
 
-if __name__ == "__main__":
-    main()
+r = (x**2 + y**2)**0.5
+
+ax = plt.subplot(1,1,1,projection='polar')
+ax.plot(x,r) 
